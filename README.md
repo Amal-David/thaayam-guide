@@ -4,6 +4,8 @@ A bilingual English and Tamil visual guide for the traditional Tamil game Thaaya
 
 Inspired by the visual, section-by-section teaching flow of [The Mahjong Guide](https://themahjong.guide/), adapted for Thaayam/Dayaakattai rules, board layout, and Tamil context.
 
+Live site: [https://amal-david.github.io/thaayam-guide/](https://amal-david.github.io/thaayam-guide/)
+
 ## Screenshots
 
 ![English hero with Dayaakattai board](docs/screenshots/hero-en.png)
