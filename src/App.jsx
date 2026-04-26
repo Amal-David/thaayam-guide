@@ -61,7 +61,7 @@ const copy = {
     },
     references: {
       title: 'Real-world references',
-      body: 'Open-license photos used to ground the chart, material, and dotted-dice details in actual game objects.',
+      body: 'Reference photos used to ground the chart, material, and dice details in actual game objects.',
       sourceLabel: 'Source',
       licenseLabel: 'License',
       items: [
@@ -78,16 +78,14 @@ const copy = {
           note: 'Displayed scaled and cropped in the card layout.',
         },
         {
-          title: 'Dice material reference',
+          title: 'Iron Dayakattai reference',
           body:
-            'A museum photo of historical dice from India, including brass and oblong forms, used as a reference for age, material, and punched markings.',
-          image: 'references/historical-indian-dice.jpg',
-          alt: 'Historical dice from India displayed in a museum case',
-          credit: 'Isomorphic, Wikimedia Commons',
-          source: 'https://commons.wikimedia.org/wiki/File:Historical_dice.jpg',
-          license: 'CC BY-SA 3.0 / GFDL',
-          licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
-          note: 'Displayed scaled and cropped in the card layout.',
+            'A product photo of the slim iron Dayakattai pair: long rectangular sticks with circular punched markings.',
+          image: 'https://giri.in/cdn/shop/files/52507214_Thaayam_Pair_Iron_2_Pcs_30_Gms_2.webp?v=1738240615',
+          alt: 'Iron Dayakattai pair with circular punched markings',
+          credit: 'Giri Trading Agency Private Limited',
+          source: 'https://giri.in/products/dayakattai-pair-2-5-x-0-25-inches-2-pcs',
+          note: 'External storefront product image, linked for reference and not copied into this repository.',
         },
       ],
     },
@@ -278,7 +276,7 @@ const copy = {
     },
     references: {
       title: 'உண்மை குறிப்பு படங்கள்',
-      body: 'கட்டம், பொருள், புள்ளிக் கட்டை விவரங்களை உண்மையான விளையாட்டு பொருட்களுடன் பொருத்திப் பார்க்க பயன்படுத்திய open-license படங்கள்.',
+      body: 'கட்டம், பொருள், புள்ளிக் கட்டை விவரங்களை உண்மையான விளையாட்டு பொருட்களுடன் பொருத்திப் பார்க்க பயன்படுத்திய குறிப்பு படங்கள்.',
       sourceLabel: 'மூலம்',
       licenseLabel: 'உரிமம்',
       items: [
@@ -295,16 +293,14 @@ const copy = {
           note: 'கார்டு அமைப்பில் அளவு மாற்றி crop செய்து காட்டப்பட்டுள்ளது.',
         },
         {
-          title: 'பகடை பொருள் குறிப்பு',
+          title: 'இரும்பு தாயக்கட்டை குறிப்பு',
           body:
-            'இந்திய வரலாற்று பகடைகளின் அருங்காட்சியகப் படம். பித்தளை, நீள வடிவம், புள்ளிக் குறிகள் போன்ற விவரங்களுக்கு குறிப்பு.',
-          image: 'references/historical-indian-dice.jpg',
-          alt: 'அருங்காட்சியகத்தில் காட்டப்பட்ட இந்திய வரலாற்று பகடைகள்',
-          credit: 'Isomorphic, Wikimedia Commons',
-          source: 'https://commons.wikimedia.org/wiki/File:Historical_dice.jpg',
-          license: 'CC BY-SA 3.0 / GFDL',
-          licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
-          note: 'கார்டு அமைப்பில் அளவு மாற்றி crop செய்து காட்டப்பட்டுள்ளது.',
+            'நீளமான செவ்வக இரும்புக் கட்டை, வட்டமாகப் பதிக்கப்பட்ட குறிகள் ஆகியவற்றை காட்டும் product படம்.',
+          image: 'https://giri.in/cdn/shop/files/52507214_Thaayam_Pair_Iron_2_Pcs_30_Gms_2.webp?v=1738240615',
+          alt: 'வட்டக் குறிகள் கொண்ட இரும்பு தாயக்கட்டை ஜோடி',
+          credit: 'Giri Trading Agency Private Limited',
+          source: 'https://giri.in/products/dayakattai-pair-2-5-x-0-25-inches-2-pcs',
+          note: 'வெளிப்புற storefront product படம்; reference ஆக link செய்யப்பட்டுள்ளது, repository-க்குள் copy செய்யப்படவில்லை.',
         },
       ],
     },
@@ -843,7 +839,11 @@ function ReferenceGallery({ references }) {
       <div className="reference-grid">
         {references.items.map((item) => (
           <article key={item.title}>
-            <img alt={item.alt} loading="lazy" src={`${import.meta.env.BASE_URL}${item.image}`} />
+            <img
+              alt={item.alt}
+              loading="lazy"
+              src={item.image.startsWith('http') ? item.image : `${import.meta.env.BASE_URL}${item.image}`}
+            />
             <div>
               <h4>{item.title}</h4>
               <p>{item.body}</p>
@@ -852,11 +852,15 @@ function ReferenceGallery({ references }) {
                 <a href={item.source} rel="noreferrer" target="_blank">
                   {item.credit}
                 </a>
-                {' · '}
-                {references.licenseLabel}:{' '}
-                <a href={item.licenseUrl} rel="noreferrer" target="_blank">
-                  {item.license}
-                </a>
+                {item.license && (
+                  <>
+                    {' · '}
+                    {references.licenseLabel}:{' '}
+                    <a href={item.licenseUrl} rel="noreferrer" target="_blank">
+                      {item.license}
+                    </a>
+                  </>
+                )}
                 {' · '}
                 {item.note}
               </small>

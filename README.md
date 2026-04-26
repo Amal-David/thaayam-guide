@@ -19,7 +19,7 @@ Live site: [https://amal-david.github.io/thaayam-guide/](https://amal-david.gith
 - Board: 7 x 7 Dayaakattai chalk layout with nine X safe squares.
 - Languages: English and Tamil.
 - Rules: stick throws, Dayam entry, bonus throws, route, cuts, safe zones, exact finish, strategy, and history.
-- Reference images: open-license board and dice references with visible attribution in the guide and in [`public/references/ATTRIBUTION.md`](public/references/ATTRIBUTION.md).
+- Reference images: attributed board and dice references in the guide and in [`public/references/ATTRIBUTION.md`](public/references/ATTRIBUTION.md).
 - GitHub default branch: `main`.
 - Open source: [Amal-David/thaayam-guide](https://github.com/Amal-David/thaayam-guide).
 
