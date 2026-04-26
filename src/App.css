@@ -350,6 +350,7 @@ h2 {
 }
 
 .detail-block,
+.reference-block,
 .matrix-block,
 .example-block,
 .probability-block,
@@ -359,6 +360,7 @@ h2 {
 }
 
 .detail-block h3,
+.reference-block h3,
 .matrix-block h3,
 .example-block h3,
 .probability-block h3,
@@ -386,6 +388,65 @@ h2 {
 .detail-grid article:hover {
   background: #fff4d9;
   transform: translateY(-3px);
+}
+
+.reference-heading {
+  max-width: 720px;
+}
+
+.reference-heading p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.reference-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid rgba(95, 69, 36, 0.18);
+  background: rgba(95, 69, 36, 0.18);
+}
+
+.reference-grid article {
+  min-height: 100%;
+  background: #fffaf0;
+}
+
+.reference-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  filter: saturate(0.92) contrast(1.02);
+}
+
+.reference-grid article > div {
+  padding: 20px;
+}
+
+.reference-grid h4 {
+  font-size: 22px;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.reference-grid p {
+  color: var(--muted);
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+.reference-grid small {
+  display: block;
+  color: rgba(107, 97, 86, 0.84);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.reference-grid a {
+  color: var(--green);
+  font-weight: 800;
 }
 
 .detail-grid strong,
@@ -1274,7 +1335,7 @@ footer a {
   }
 
   .detail-grid {
-    --detail-columns: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -1317,6 +1378,7 @@ footer a {
   .rule-grid,
   .throw-panel,
   .example-timeline,
+  .reference-grid,
   .probability-grid,
   .why-block > div,
   .section-heading {
@@ -1324,7 +1386,7 @@ footer a {
   }
 
   .detail-grid {
-    --detail-columns: 1;
+    grid-template-columns: 1fr;
   }
 
   .history-timeline article {

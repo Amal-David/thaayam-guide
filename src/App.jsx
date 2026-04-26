@@ -59,6 +59,38 @@ const copy = {
         ['Start marks', 'Use small colored marks near the sides so everyone remembers their entry side.'],
       ],
     },
+    references: {
+      title: 'Real-world references',
+      body: 'Open-license photos used to ground the chart, material, and dotted-dice details in actual game objects.',
+      sourceLabel: 'Source',
+      licenseLabel: 'License',
+      items: [
+        {
+          title: 'Floor chart reference',
+          body:
+            'A Dayakkattai game diagram drawn on a Tamil Nadu floor, useful for the cross-shaped chart and hand-drawn spacing.',
+          image: 'references/dayakkattai-game-diagram.jpg',
+          alt: 'Dayakkattai game diagram drawn on a concrete floor',
+          credit: 'S.Elaiyaraja, Wikimedia Commons',
+          source: 'https://commons.wikimedia.org/wiki/File:Dayakkattai_Game_Diagram_in_Tamilnadu.jpg',
+          license: 'CC BY-SA 4.0',
+          licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+          note: 'Displayed scaled and cropped in the card layout.',
+        },
+        {
+          title: 'Dice material reference',
+          body:
+            'A museum photo of historical dice from India, including brass and oblong forms, used as a reference for age, material, and punched markings.',
+          image: 'references/historical-indian-dice.jpg',
+          alt: 'Historical dice from India displayed in a museum case',
+          credit: 'Isomorphic, Wikimedia Commons',
+          source: 'https://commons.wikimedia.org/wiki/File:Historical_dice.jpg',
+          license: 'CC BY-SA 3.0 / GFDL',
+          licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+          note: 'Displayed scaled and cropped in the card layout.',
+        },
+      ],
+    },
     throws: {
       kicker: '02',
       title: 'Read the Dayakattai sticks',
@@ -242,6 +274,38 @@ const copy = {
         ['பாதுகாப்பு', 'படத்தில் இருக்கும் வைரம் போன்ற அமைப்பில் ஒன்பது சதுரங்களில் பெரிய X குறி போடுங்கள்.'],
         ['வீடு', 'ஒவ்வொரு வீரரின் காய்களையும் பலகைக்கு வெளியே தனி குவியலாக வைத்திருங்கள்.'],
         ['தொடக்கம்', 'ஒவ்வொருவரின் தொடக்கப் பக்கத்தை நினைவில் வைக்க சிறிய நிறக் குறிகள் வைக்கலாம்.'],
+      ],
+    },
+    references: {
+      title: 'உண்மை குறிப்பு படங்கள்',
+      body: 'கட்டம், பொருள், புள்ளிக் கட்டை விவரங்களை உண்மையான விளையாட்டு பொருட்களுடன் பொருத்திப் பார்க்க பயன்படுத்திய open-license படங்கள்.',
+      sourceLabel: 'மூலம்',
+      licenseLabel: 'உரிமம்',
+      items: [
+        {
+          title: 'தரை கட்டம் குறிப்பு',
+          body:
+            'தமிழ்நாட்டில் தரையில் வரையப்பட்ட Dayakkattai விளையாட்டு வரைபடம். குறுக்கு வடிவ கட்டமும் கையால் வரையப்பட்ட இடைவெளியும் பார்க்க உதவும்.',
+          image: 'references/dayakkattai-game-diagram.jpg',
+          alt: 'கான்கிரீட் தரையில் வரையப்பட்ட Dayakkattai விளையாட்டு வரைபடம்',
+          credit: 'S.Elaiyaraja, Wikimedia Commons',
+          source: 'https://commons.wikimedia.org/wiki/File:Dayakkattai_Game_Diagram_in_Tamilnadu.jpg',
+          license: 'CC BY-SA 4.0',
+          licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+          note: 'கார்டு அமைப்பில் அளவு மாற்றி crop செய்து காட்டப்பட்டுள்ளது.',
+        },
+        {
+          title: 'பகடை பொருள் குறிப்பு',
+          body:
+            'இந்திய வரலாற்று பகடைகளின் அருங்காட்சியகப் படம். பித்தளை, நீள வடிவம், புள்ளிக் குறிகள் போன்ற விவரங்களுக்கு குறிப்பு.',
+          image: 'references/historical-indian-dice.jpg',
+          alt: 'அருங்காட்சியகத்தில் காட்டப்பட்ட இந்திய வரலாற்று பகடைகள்',
+          credit: 'Isomorphic, Wikimedia Commons',
+          source: 'https://commons.wikimedia.org/wiki/File:Historical_dice.jpg',
+          license: 'CC BY-SA 3.0 / GFDL',
+          licenseUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+          note: 'கார்டு அமைப்பில் அளவு மாற்றி crop செய்து காட்டப்பட்டுள்ளது.',
+        },
       ],
     },
     throws: {
@@ -630,6 +694,7 @@ function App() {
             ))}
           </ul>
           <DetailGrid title={t.setup.detailsTitle} items={t.setup.details} />
+          <ReferenceGallery references={t.references} />
         </GuideSection>
 
         <GuideSection id="throws" icon={Dices} section={t.throws}>
@@ -761,6 +826,41 @@ function DetailGrid({ items, title }) {
           <article key={label}>
             <strong>{label}</strong>
             <p>{body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+function ReferenceGallery({ references }) {
+  return (
+    <div className="reference-block reveal-panel">
+      <div className="reference-heading">
+        <h3>{references.title}</h3>
+        <p>{references.body}</p>
+      </div>
+      <div className="reference-grid">
+        {references.items.map((item) => (
+          <article key={item.title}>
+            <img alt={item.alt} loading="lazy" src={`${import.meta.env.BASE_URL}${item.image}`} />
+            <div>
+              <h4>{item.title}</h4>
+              <p>{item.body}</p>
+              <small>
+                {references.sourceLabel}:{' '}
+                <a href={item.source} rel="noreferrer" target="_blank">
+                  {item.credit}
+                </a>
+                {' · '}
+                {references.licenseLabel}:{' '}
+                <a href={item.licenseUrl} rel="noreferrer" target="_blank">
+                  {item.license}
+                </a>
+                {' · '}
+                {item.note}
+              </small>
+            </div>
           </article>
         ))}
       </div>
