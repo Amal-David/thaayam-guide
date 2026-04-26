@@ -1,6 +1,6 @@
 # thaayam-guide
 
-A bilingual English and Tamil visual guide for the traditional Tamil game Thaayam, also known as Dayaakattai. The current flow follows the Dayakattai stick-dice version shown in the reference video.
+A bilingual English and Tamil visual guide for the traditional Tamil game Thaayam, also known as Dayaakattai. The guide covers the Dayakattai stick-dice version with setup, throws, movement, strategy, and history.
 
 Inspired by the visual, section-by-section teaching flow of [The Mahjong Guide](https://themahjong.guide/), adapted for Thaayam/Dayaakattai rules, board layout, and Tamil context.
 

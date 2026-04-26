@@ -45,7 +45,7 @@ const copy = {
       kicker: '01',
       title: 'Draw and set up',
       body:
-        'The video version is the Dayaakattai style: draw the grid with chalk, mark safe zones with X, and keep each player’s coins or buttons in an off-board home pile before entry.',
+        'This Dayaakattai style uses a chalk-style grid, X-marked safe zones, and each player’s coins or buttons in an off-board home pile before entry.',
       notes: [
         'Use coins, buttons, stones, shells, or any small markers as pieces.',
         'Each player usually starts with six or twelve pieces in home.',
@@ -53,7 +53,7 @@ const copy = {
       ],
       detailsTitle: 'What to draw',
       details: [
-        ['Grid', 'Draw a clear 7 x 7 square grid. The video uses chalk on the floor.'],
+        ['Grid', 'Draw a clear 7 x 7 square grid, traditionally made with chalk on the floor.'],
         ['Safe squares', 'Mark nine squares with a large X in the same diamond pattern shown on the board.'],
         ['Player homes', 'Keep each player’s pieces as a separate pile outside the board until they enter.'],
         ['Start marks', 'Use small colored marks near the sides so everyone remembers their entry side.'],
@@ -107,7 +107,7 @@ const copy = {
       kicker: '04',
       title: 'Read the board',
       body:
-        'The video board is a 7 x 7 chalk grid. Pieces travel around the outer track, then turn inward toward the center home. X-marked squares are safety.',
+        'The board is a 7 x 7 chalk-style grid. Pieces travel around the outer track, then turn inward toward the center home. X-marked squares are safety.',
       controls: ['South', 'West', 'North', 'East'],
       hint: 'Select a player to rotate the starting side and finish lane.',
       home: 'Home',
@@ -190,7 +190,7 @@ const copy = {
         ['Ancient roots', 'Indian race games using chance and movement are old, and the wider Pachisi family is often discussed alongside epic dice-play traditions.'],
         ['Tamil household play', 'Dayakattai became a Tamil Nadu home and community game: chalk or floor grids, long brass or wooden sticks, and everyday objects as pieces.'],
         ['Local variants', 'Boards, piece counts, safe-square patterns, and paired-piece rules vary by family and region. That is why visual layout matters.'],
-        ['Modern revival', 'Today it appears in videos, apps, printed boards, school activities, and culture projects that preserve traditional games.'],
+        ['Modern revival', 'Today it appears in apps, printed boards, school activities, online explainers, and culture projects that preserve traditional games.'],
       ],
       whyTitle: 'Why it is good',
       why: [
@@ -230,7 +230,7 @@ const copy = {
       kicker: '01',
       title: 'கட்டம் வரைந்து அமைக்கவும்',
       body:
-        'வீடியோவில் காட்டப்பட்ட முறை தாயக்கட்டை பாணி: தரையில் சாக்பீஸால் கட்டம் வரைந்து, பாதுகாப்பு இடங்களை X ஆக குறிக்கவும்; காய்களை பலகைக்கு வெளியே வீட்டுக் குவியலில் வைத்துத் தொடங்கவும்.',
+        'இந்த தாயக்கட்டை பாணியில் சாக்பீஸ் போன்ற கட்டம், X பாதுகாப்பு இடங்கள், மற்றும் பலகைக்கு வெளியே வீட்டுக் குவியலில் இருக்கும் காய்கள் பயன்படுத்தப்படுகின்றன.',
       notes: [
         'காசு, பட்டன், கல், சோழி போன்ற சிறிய பொருட்களை காய்களாகப் பயன்படுத்தலாம்.',
         'ஒவ்வொரு வீரரும் பொதுவாக 6 அல்லது 12 காய்களுடன் தொடங்குவார்.',
@@ -238,7 +238,7 @@ const copy = {
       ],
       detailsTitle: 'எதை வரைய வேண்டும்',
       details: [
-        ['கட்டம்', '7 x 7 சதுரக் கட்டத்தை தெளிவாக வரையுங்கள். வீடியோவில் தரையில் சாக்பீஸ் பயன்படுத்தப்படுகிறது.'],
+        ['கட்டம்', '7 x 7 சதுரக் கட்டத்தை தெளிவாக வரையுங்கள். பாரம்பரியமாக தரையில் சாக்பீஸ் பயன்படுத்தப்படும்.'],
         ['பாதுகாப்பு', 'படத்தில் இருக்கும் வைரம் போன்ற அமைப்பில் ஒன்பது சதுரங்களில் பெரிய X குறி போடுங்கள்.'],
         ['வீடு', 'ஒவ்வொரு வீரரின் காய்களையும் பலகைக்கு வெளியே தனி குவியலாக வைத்திருங்கள்.'],
         ['தொடக்கம்', 'ஒவ்வொருவரின் தொடக்கப் பக்கத்தை நினைவில் வைக்க சிறிய நிறக் குறிகள் வைக்கலாம்.'],
@@ -292,7 +292,7 @@ const copy = {
       kicker: '04',
       title: 'கட்டத்தைப் புரிந்துகொள்ளவும்',
       body:
-        'வீடியோவில் இருக்கும் பலகை 7 x 7 சாக்பீஸ் கட்டம். காய்கள் வெளிப்பாதையில் சுற்றி, பிறகு மைய வீட்டை நோக்கி உள்ளே திரும்புகின்றன. X குறியிட்ட இடங்கள் பாதுகாப்பு.',
+        'இந்த பலகை 7 x 7 சாக்பீஸ் பாணி கட்டம். காய்கள் வெளிப்பாதையில் சுற்றி, பிறகு மைய வீட்டை நோக்கி உள்ளே திரும்புகின்றன. X குறியிட்ட இடங்கள் பாதுகாப்பு.',
       controls: ['தெற்கு', 'மேற்கு', 'வடக்கு', 'கிழக்கு'],
       hint: 'வீரரைத் தேர்ந்தெடுத்து தொடக்கப் பக்கம் மற்றும் முடிவுப் பாதையை மாற்றிப் பாருங்கள்.',
       home: 'மனை',
@@ -375,7 +375,7 @@ const copy = {
         ['பழமையான வேர்கள்', 'வாய்ப்பும் நகர்வும் சேர்ந்த இந்திய ஓட்ட விளையாட்டுகள் பழமையானவை; பச்சிசி குடும்பமும் காவிய பகடை மரபுகளுடனும் அடிக்கடி தொடர்புபடுத்தப்படுகிறது.'],
         ['தமிழ் வீட்டு விளையாட்டு', 'தாயக்கட்டை தமிழ்நாட்டில் வீடு மற்றும் சமூக விளையாட்டாக வளர்ந்தது: சாக்பீஸ் கட்டம், நீளமான பித்தளை/மரக் கட்டைகள், எளிய காய்கள்.'],
         ['உள்ளூர் மாறுபாடுகள்', 'கட்டம், காய் எண்ணிக்கை, X இடங்கள், ஜோடி காய் விதி ஆகியவை குடும்பம் மற்றும் இடத்துக்கு ஏற்ப மாறலாம். அதனால் காட்சி அமைப்பு முக்கியம்.'],
-        ['நவீன மறுமலர்ச்சி', 'இப்போது வீடியோ, ஆப், அச்சுப் பலகை, பள்ளி செயல்பாடு, பாரம்பரிய விளையாட்டு திட்டங்கள் மூலம் மீண்டும் பரவுகிறது.'],
+        ['நவீன மறுமலர்ச்சி', 'இப்போது ஆப், அச்சுப் பலகை, பள்ளி செயல்பாடு, இணைய விளக்கங்கள், பாரம்பரிய விளையாட்டு திட்டங்கள் மூலம் மீண்டும் பரவுகிறது.'],
       ],
       whyTitle: 'ஏன் இது நல்ல விளையாட்டு',
       why: [
