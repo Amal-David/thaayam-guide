@@ -14,13 +14,13 @@ Live site: [https://amal-david.github.io/thaayam-guide/](https://amal-david.gith
 
 ![Tamil mobile strategy section](docs/screenshots/mobile-ta.png)
 
-## Context kept
+## Project Details
 
 - Board: 7 x 7 Dayaakattai chalk layout with nine X safe squares.
 - Languages: English and Tamil.
 - Rules: stick throws, Dayam entry, bonus throws, route, cuts, safe zones, exact finish, strategy, and history.
-- Sources: shared video context, Cyningstan Thaayam leaflet context, and Dayakattai stick-dice references. No external source links are rendered in the app because the Cyningstan HTTPS page refuses connections in some browsers.
 - GitHub default branch: `main`.
+- Open source: [Amal-David/thaayam-guide](https://github.com/Amal-David/thaayam-guide).
 
 ## Run locally
 

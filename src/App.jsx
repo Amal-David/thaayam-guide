@@ -199,8 +199,7 @@ const copy = {
         ['Luck plus judgment', 'Throws decide opportunity; good players decide which opportunity is worth taking.'],
       ],
     },
-    source:
-      'Context kept from the shared video, the Cyningstan Thaayam leaflet, and Dayakattai stick-dice references.',
+    source: 'This project is open source.',
   },
   ta: {
     code: 'TA',
@@ -385,8 +384,7 @@ const copy = {
         ['அதிர்ஷ்டமும் தீர்மானமும்', 'வீச்சு வாய்ப்பை தரும்; நல்ல வீரர் எந்த வாய்ப்பை பயன்படுத்துவது என்று தீர்மானிப்பார்.'],
       ],
     },
-    source:
-      'பகிரப்பட்ட வீடியோ, Cyningstan தாயம் துண்டுப் பிரசுரம், மற்றும் தாயக்கட்டை கட்டை-பகடை குறிப்புகளில் இருந்து சரியான சூழல் மட்டும் வைக்கப்பட்டுள்ளது.',
+    source: 'இந்த திட்டம் open source ஆக உள்ளது.',
   },
 }
 
@@ -702,6 +700,9 @@ function App() {
           <strong>thaayam-guide</strong>
           <span>Thaayam / Dayaakattai</span>
           <span>{t.source}</span>
+          <a href="https://github.com/Amal-David/thaayam-guide" rel="noreferrer" target="_blank">
+            GitHub
+          </a>
         </footer>
       </main>
     </div>
