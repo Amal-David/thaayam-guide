@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   Brain,
   Dices,
@@ -440,6 +440,13 @@ const safeSquares = new Set([
   '3,6',
 ])
 
+const stickDots = {
+  0: [],
+  1: ['center'],
+  2: ['top', 'bottom'],
+  3: ['top', 'center', 'bottom'],
+}
+
 function rotatePoint([x, y], deg) {
   if (deg === 90) return [y, BOARD_MAX - x]
   if (deg === 180) return [BOARD_MAX - x, BOARD_MAX - y]
@@ -452,13 +459,33 @@ function getInitialLanguage() {
   return params.get('lang') === 'ta' ? 'ta' : 'en'
 }
 
+function DayakattaiStick({ label, rolling, value }) {
+  return (
+    <span
+      aria-label={`${label}: ${value}`}
+      className={`stick-face face-${value} ${rolling ? 'is-rolling' : ''}`}
+    >
+      <span className="stick-surface" aria-hidden="true">
+        <span className="dot-track">
+          {stickDots[value].map((position) => (
+            <i className={`thaayam-dot dot-${position}`} key={position} />
+          ))}
+        </span>
+        {value === 0 && <span className="blank-mark" />}
+      </span>
+    </span>
+  )
+}
+
 function App() {
   const [lang, setLang] = useState(getInitialLanguage)
   const [activePlayer, setActivePlayer] = useState(0)
   const [activeId, setActiveId] = useState('top')
   const [activeStep, setActiveStep] = useState(0)
   const [diceState, setDiceState] = useState([0, 1])
+  const [isRolling, setIsRolling] = useState(false)
   const [rollKey, setRollKey] = useState(0)
+  const rollTimeoutRef = useRef(null)
   const t = copy[lang]
   const active = players[activePlayer]
   const routePath = useMemo(
@@ -493,6 +520,8 @@ function App() {
     })
   }, [lang])
 
+  useEffect(() => () => window.clearTimeout(rollTimeoutRef.current), [])
+
   function changeLanguage(nextLang) {
     setLang(nextLang)
     const url = new URL(window.location.href)
@@ -501,11 +530,18 @@ function App() {
   }
 
   function rollSticks() {
-    setDiceState([
-      Math.floor(Math.random() * 4),
-      Math.floor(Math.random() * 4),
-    ])
+    if (isRolling) return
+    window.clearTimeout(rollTimeoutRef.current)
+    setIsRolling(true)
     setRollKey((key) => key + 1)
+    rollTimeoutRef.current = window.setTimeout(() => {
+      setDiceState([
+        Math.floor(Math.random() * 4),
+        Math.floor(Math.random() * 4),
+      ])
+      setRollKey((key) => key + 1)
+      setIsRolling(false)
+    }, 760)
   }
 
   return (
@@ -607,15 +643,22 @@ function App() {
               ))}
             </div>
             <div className="stick-sim">
-              <div className="sticks" aria-label={`${t.throws.result}: ${score}`} key={rollKey}>
+              <div
+                aria-busy={isRolling}
+                aria-label={`${t.throws.result}: ${score}`}
+                className={`sticks ${isRolling ? 'is-rolling' : ''}`}
+                key={rollKey}
+              >
                 {diceState.map((value, index) => (
-                  <span className={`stick-face face-${value}`} key={`${index}-${value}`}>
-                    <small>{t.throws.die} {index + 1}</small>
-                    <b>{value}</b>
-                  </span>
+                  <DayakattaiStick
+                    key={`${index}-${value}`}
+                    label={`${t.throws.die} ${index + 1}`}
+                    rolling={isRolling}
+                    value={value}
+                  />
                 ))}
               </div>
-              <button type="button" onClick={rollSticks}>
+              <button type="button" onClick={rollSticks} disabled={isRolling}>
                 <Dices size={18} aria-hidden="true" />
                 {t.throws.simulator}
               </button>
