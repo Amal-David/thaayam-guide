@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#b93628"/>
+  <rect x="7" y="7" width="50" height="50" fill="none" stroke="#fff1d1" stroke-width="3"/>
+  <path d="M16 32h32M32 16v32M20 20l24 24M44 20 20 44" stroke="#fffaf0" stroke-linecap="round" stroke-width="3"/>
+  <text x="32" y="38" fill="#fffaf0" font-family="serif" font-size="22" font-weight="800" text-anchor="middle">தா</text>
+</svg>
