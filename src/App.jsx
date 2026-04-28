@@ -20,10 +20,10 @@ const copy = {
     code: 'EN',
     label: 'English',
     title: 'Thaayam Guide',
-    eyebrow: 'Also called Dayaakattai',
+    eyebrow: 'Traditional Tamil board game',
     intro:
       'Learn the chalk-board setup, Dayakattai stick throws, entry rules, cutting, safe zones, and exact finish in a few minutes.',
-    alias: 'Dayaakattai is another common name for Thaayam.',
+    alias: 'A bilingual visual guide to Thaayam.',
     cta: 'Start with setup',
     nav: [
       ['setup', 'Setup'],
@@ -235,10 +235,10 @@ const copy = {
     code: 'TA',
     label: 'தமிழ்',
     title: 'தாயம் வழிகாட்டி',
-    eyebrow: 'தாயக்கட்டை என்றும் அழைக்கப்படுகிறது',
+    eyebrow: 'தமிழ் பாரம்பரிய விளையாட்டு',
     intro:
       'கட்டம் வரைவது, தாயக்கட்டை வீச்சு, காய் இறக்குதல், வெட்டுதல், பாதுகாப்பு X இடங்கள், சரியான முடிவு ஆகியவற்றை சில நிமிடங்களில் கற்றுக்கொள்ளுங்கள்.',
-    alias: 'Dayaakattai என்பது தாயம் விளையாட்டின் மற்றொரு பொதுவான பெயர்.',
+    alias: 'தாயம் விளையாட்டுக்கான இருமொழி காட்சி வழிகாட்டி.',
     cta: 'அமைப்பில் தொடங்கு',
     nav: [
       ['setup', 'அமைப்பு'],
